@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111318">
+  <meta name="description" content="Smart Park — a premium smart parking management prototype.">
+  <title>Smart Park | Parking, perfected.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    SMARTER CITY PARKING · DEMO EXPERIENCE
+    <span class="announcement-right">A better way to arrive.</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" data-page-link="home" aria-label="Smart Park home">
+      <span class="brand-mark">S<span>P</span></span>
+      <span class="brand-name">SMART<span>PARK</span><small>PARKING, PERFECTED.</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-page-link="home" class="nav-link active">Home</a>
+      <a href="#find-parking" data-page-link="find-parking" class="nav-link">Find Parking</a>
+      <a href="#smartmatch" data-page-link="smartmatch" class="nav-link">SmartMatch</a>
+      <a href="#ecopark" data-page-link="ecopark" class="nav-link">EcoPark</a>
+      <a href="#dashboard" data-page-link="dashboard" class="nav-link">Dashboard</a>
+      <button class="nav-admin" data-page-link="admin">Admin ↗</button>
+    </nav>
+    <button class="header-cta" data-page-link="find-parking">Book a space <span>↗</span></button>
+  </header>
+
+  <main>
+    <!-- HOME PAGE -->
+    <section class="page active" id="page-home" data-page="home">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> THE FUTURE OF EVERYDAY PARKING</div>
+          <h1>Arrive better.<br><em>Park smarter.</em></h1>
+          <p class="hero-description">A calmer way to find your space. Discover available parking, get a smart recommendation and make every arrival effortless.</p>
+          <div class="hero-actions">
+            <button class="btn btn-gold" data-page-link="find-parking">Explore parking <span>↗</span></button>
+            <button class="btn btn-outline" data-page-link="smartmatch">Discover SmartMatch</button>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-avatars"><span>SP</span><span>✦</span><span>✓</span></div>
+            <div><strong>Designed around your journey</strong><small>Simple · Clear · Convenient</small></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image"></div>
+          <div class="floating-card availability-card">
+            <span class="live-indicator"></span>
+            <div><small>DEMO AVAILABILITY</small><strong id="heroAvailable">24 spaces</strong></div>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="floating-card location-card">
+            <span class="location-icon">⌖</span>
+            <div><small>FEATURED LOCATION</small><strong>Central Parking</strong></div>
+          </div>
+          <div class="hero-image-label">01 / SMART CITY MOBILITY</div>
+        </div>
+      </section>
+
+      <section class="quick-search section-wrap">
+        <div class="search-heading">
+          <div><span class="eyebrow">START YOUR JOURNEY</span><h2>Find your <em>space.</em></h2></div>
+          <span class="search-note">A few details. A smoother arrival.</span>
+        </div>
+        <form class="search-bar" id="homeSearchForm">
+          <label class="search-field"><span>⌖</span><div><small>LOCATION</small><input id="homeLocation" type="text" placeholder="Where would you like to park?" value="Central Parking"></div></label>
+          <label class="search-field"><span>▣</span><div><small>VEHICLE TYPE</small><select id="homeVehicle"><option value="Car">Car</option><option value="Bike">Bike</option><option value="EV">Electric vehicle</option></select></div></label>
+          <label class="search-field"><span>◷</span><div><small>DATE</small><input id="homeDate" type="date"></div></label>
+          <button class="btn btn-gold search-submit" type="submit">Find parking <span>→</span></button>
+        </form>
+      </section>
+
+      <section class="feature-section section-wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">MORE THAN A PARKING SPACE</span><h2>A smarter way <em>to move.</em></h2></div>
+          <p>Thoughtful tools that make the entire parking experience feel simpler, from search to arrival.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-large">
+            <div class="feature-icon">✧</div><span class="feature-number">01 / INTELLIGENCE</span>
+            <h3>SmartMatch</h3>
+            <p>Get a ranked recommendation based on your budget, preferred distance and parking needs.</p>
+            <button class="text-link" data-page-link="smartmatch">Find your best match <span>↗</span></button>
+            <div class="feature-art match-art"><div class="mini-score"><small>BEST MATCH</small><strong>96<span>/100</span></strong><i>Excellent fit</i></div><div class="art-lines"></div></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⌖</div><span class="feature-number">02 / WAYFINDING</span>
+            <h3>Find My Slot</h3>
+            <p>See a simple parking layout and identify your selected space.</p>
+            <button class="text-link" data-page-link="parking-map">Explore the map <span>↗</span></button>
+            <div class="mini-parking-grid"><i></i><i class="occupied"></i><i></i><i></i><i class="reserved"></i><i></i></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div><span class="feature-number">03 / SUSTAINABILITY</span>
+            <h3>EcoPark</h3>
+            <p>Discover dedicated EV spaces and charging-point information.</p>
+            <button class="text-link" data-page-link="ecopark">Explore EcoPark <span>↗</span></button>
+            <div class="eco-art"><span>⚡</span><small>CHARGE INTO TOMORROW</small></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="eco-banner section-wrap">
+        <div class="eco-banner-copy"><span class="eyebrow">A MORE CONSCIOUS ARRIVAL</span><h2>Make room for<br><em>electric journeys.</em></h2><p>Explore EV-friendly parking spaces and charging availability in one simple place.</p><button class="btn btn-light" data-page-link="ecopark">Explore EcoPark <span>↗</span></button></div>
+        <div class="eco-banner-art"><div class="charge-ring">⚡</div><span class="eco-label">ELECTRIC<br>READY</span></div>
+      </section>
+
+      <section class="how-section section-wrap">
+        <div class="section-heading"><div><span class="eyebrow">THREE SIMPLE STEPS</span><h2>From search <em>to settled.</em></h2></div></div>
+        <div class="steps-grid">
+          <div class="step"><span>01</span><div class="step-icon">⌕</div><h3>Discover</h3><p>Search for a parking area that suits your destination.</p></div>
+          <div class="step"><span>02</span><div class="step-icon">✧</div><h3>Choose</h3><p>Compare available spaces or let SmartMatch help.</p></div>
+          <div class="step"><span>03</span><div class="step-icon">✓</div><h3>Arrive</h3><p>Reserve a demo slot and view your digital pass.</p></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- FIND PARKING PAGE -->
+    <section class="page inner-page" id="page-find-parking" data-page="find-parking">
+      <div class="page-heading"><span class="eyebrow">YOUR NEXT STOP</span><h1>Find your <em>parking.</em></h1><p>Explore demo parking areas and choose a space that works for you.</p></div>
+      <div class="filter-panel">
+        <label>Search location<input id="parkingSearch" type="search" placeholder="Search parking areas..."></label>
+        <label>Vehicle<select id="vehicleFilter"><option value="All">All vehicles</option><option>Car</option><option>Bike</option><option>EV</option></select></label>
+        <label>Availability<select id="availabilityFilter"><option value="All">All spaces</option><option value="Available">Available only</option></select></label>
+      </div>
+      <div class="results-top"><span id="resultCount">3 parking areas</span><span class="demo-label">SAMPLE DATA · NOT LIVE</span></div>
+      <div class="parking-list" id="parkingList"></div>
+    </section>
+
+    <!-- SMARTMATCH PAGE -->
+    <section class="page inner-page" id="page-smartmatch" data-page="smartmatch">
+      <div class="page-heading"><span class="eyebrow">YOUR PERSONAL PARKING GUIDE</span><h1>Meet <em>SmartMatch.</em></h1><p>Tell us what matters. We'll rank the available spaces using a transparent demo scoring system.</p></div>
+      <div class="smartmatch-layout">
+        <form class="preference-card" id="matchForm">
+          <span class="eyebrow">YOUR PREFERENCES</span><h2>What matters most?</h2>
+          <label>Maximum hourly budget <select id="budgetPreference"><option value="30">Up to ₹30</option><option value="50" selected>Up to ₹50</option><option value="100">Up to ₹100</option></select></label>
+          <label>Preferred walking distance <select id="distancePreference"><option value="Near">As close as possible</option><option value="Any" selected>Any distance</option></select></label>
+          <label class="check-row"><input type="checkbox" id="evPreference"> I need an EV charging space</label>
+          <button class="btn btn-gold full-width" type="submit">Find my best match <span>✧</span></button>
+          <p class="tiny-note">Recommendations are calculated from sample data. This is not an AI or live availability service.</p>
+        </form>
+        <div class="match-results"><div class="results-top"><span>YOUR RECOMMENDATIONS</span><span class="match-status">● DEMO ENGINE</span></div><div id="matchList" class="match-list"><div class="empty-state"><span>✧</span><h3>Your best match is waiting.</h3><p>Choose your preferences and select Find my best match.</p></div></div></div>
+      </div>
+    </section>
+
+    <!-- PARKING MAP PAGE -->
+    <section class="page inner-page" id="page-parking-map" data-page="parking-map">
+      <div class="page-heading"><span class="eyebrow">VISUAL WAYFINDING</span><h1>Find your <em>slot.</em></h1><p>Explore this illustrative parking floor. Select an available space to reserve it.</p></div>
+      <div class="map-toolbar"><div><strong>Central Parking</strong><small>LEVEL 01 · SAMPLE LAYOUT</small></div><span class="demo-label">ILLUSTRATIVE MAP</span></div>
+      <div class="parking-map-shell"><div class="entrance">↓  ENTRANCE</div><div class="parking-grid" id="parkingGrid"></div><div class="map-exit">EXIT  →</div></div>
+      <div class="map-legend"><span><i class="legend-dot available"></i>Available</span><span><i class="legend-dot occupied"></i>Occupied</span><span><i class="legend-dot reserved"></i>Reserved</span><span><i class="legend-dot ev"></i>EV</span></div>
+      <div class="map-selection" id="mapSelection">Select an available parking slot to see its details.</div>
+    </section>
+
+    <!-- ECOPARK PAGE -->
+    <section class="page inner-page" id="page-ecopark" data-page="ecopark">
+      <div class="page-heading"><span class="eyebrow">ELECTRIC MOBILITY</span><h1>Welcome to <em>EcoPark.</em></h1><p>Dedicated spaces for electric journeys. Explore the EV parking options in our sample network.</p></div>
+      <div class="eco-intro"><div><span class="eyebrow">POWER A BETTER ARRIVAL</span><h2>Park. Plug in.<br><em>Move forward.</em></h2><p>Find designated EV spaces and view their demo charging status before making a reservation.</p></div><div class="eco-big-icon">ϟ</div></div>
+      <div class="stats-grid three-stats"><div class="stat-card"><small>EV SPACES</small><strong id="evTotal">6</strong><span>Across sample locations</span></div><div class="stat-card"><small>AVAILABLE</small><strong id="evAvailable">4</strong><span>Demo availability</span></div><div class="stat-card"><small>CHARGING POINTS</small><strong>3</strong><span>Illustrative information</span></div></div>
+      <h2 class="subheading">EV spaces to explore</h2><div class="ev-list" id="evList"></div>
+    </section>
+
+    <!-- USER DASHBOARD -->
+    <section class="page inner-page" id="page-dashboard" data-page="dashboard">
+      <div class="page-heading"><span class="eyebrow">YOUR SMART PARK</span><h1>Your parking <em>overview.</em></h1><p>Welcome back. Here's a snapshot of your demo activity.</p></div>
+      <div class="stats-grid"><div class="stat-card"><small>ACTIVE BOOKINGS</small><strong id="userActive">0</strong><span>Current reservations</span></div><div class="stat-card"><small>AVAILABLE SPACES</small><strong id="userAvailable">24</strong><span>Across sample locations</span></div><div class="stat-card"><small>TOTAL BOOKINGS</small><strong id="userTotal">0</strong><span>Your demo history</span></div></div>
+      <div class="dashboard-columns"><div class="panel"><div class="panel-heading"><h2>Recent bookings</h2><button class="text-link" data-page-link="bookings">View all ↗</button></div><div id="dashboardBookings" class="compact-list"></div></div><div class="panel dashboard-promo"><span class="eyebrow">A SMARTER CHOICE</span><h2>Let SmartMatch<br>find your fit.</h2><p>Compare spaces by price, distance and preferences.</p><button class="btn btn-gold" data-page-link="smartmatch">Try SmartMatch ↗</button></div></div>
+    </section>
+
+    <!-- BOOKINGS PAGE -->
+    <section class="page inner-page" id="page-bookings" data-page="bookings">
+      <div class="page-heading"><span class="eyebrow">YOUR RESERVATIONS</span><h1>My <em>bookings.</em></h1><p>Review your reservations and open your digital parking pass.</p></div>
+      <div id="bookingList" class="booking-list"></div>
+    </section>
+
+    <!-- DIGITAL PASS PAGE -->
+    <section class="page inner-page" id="page-pass" data-page="pass">
+      <div class="page-heading"><span class="eyebrow">YOUR ARRIVAL, MADE SIMPLE</span><h1>Digital <em>parking pass.</em></h1><p>Your booking details, together in one place.</p></div>
+      <div id="passContent" class="pass-wrap"><div class="empty-state"><span>▤</span><h3>No pass selected yet.</h3><p>Make a demo booking to create your parking pass.</p><button class="btn btn-gold" data-page-link="find-parking">Find parking</button></div></div>
+    </section>
+
+    <!-- ADMIN DASHBOARD -->
+    <section class="page inner-page" id="page-admin" data-page="admin">
+      <div class="admin-title-row"><div class="page-heading"><span class="eyebrow">CONTROL CENTRE · DEMO MODE</span><h1>Admin <em>overview.</em></h1><p>Monitor sample parking activity and manage reservations.</p></div><span class="admin-pill">ADMIN PREVIEW</span></div>
+      <div class="stats-grid"><div class="stat-card"><small>TOTAL SPACES</small><strong id="adminTotalSlots">24</strong><span>Across all sample locations</span></div><div class="stat-card"><small>AVAILABLE</small><strong id="adminAvailable">0</strong><span>Ready to reserve</span></div><div class="stat-card"><small>ACTIVE BOOKINGS</small><strong id="adminBookings">0</strong><span>Current reservations</span></div><div class="stat-card"><small>EST. DEMO REVENUE</small><strong id="adminRevenue">₹0</strong><span>Based on active bookings</span></div></div>
+      <div class="panel admin-panel"><div class="panel-heading"><h2>Booking management</h2><button class="text-link" id="refreshAdmin">Refresh ↻</button></div><div class="table-wrap"><table><thead><tr><th>BOOKING ID</th><th>LOCATION / SLOT</th><th>USER</th><th>PRICE</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="adminBookingRows"></tbody></table></div></div>
+      <div class="admin-note"><strong>Prototype note:</strong> Admin preview is open for demonstration. A production system would require secure admin authentication and a server-side database.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div><a class="brand footer-brand" href="#home" data-page-link="home"><span class="brand-mark">S<span>P</span></span><span class="brand-name">SMART<span>PARK</span><small>PARKING, PERFECTED.</small></span></a><p>A thoughtful digital parking experience designed for smoother everyday journeys.</p></div>
+      <div class="footer-links"><strong>EXPLORE</strong><a href="#find-parking" data-page-link="find-parking">Find Parking</a><a href="#smartmatch" data-page-link="smartmatch">SmartMatch</a><a href="#ecopark" data-page-link="ecopark">EcoPark</a></div>
+      <div class="footer-links"><strong>YOUR SPACE</strong><a href="#dashboard" data-page-link="dashboard">Dashboard</a><a href="#bookings" data-page-link="bookings">My Bookings</a><a href="#admin" data-page-link="admin">Admin Preview</a></div>
+      <div class="footer-contact"><strong>BUILT FOR BETTER ARRIVALS</strong><span>Smart parking. Simpler journeys.</span><span class="footer-tag">STUDENT PROTOTYPE · VERSION 1.0</span></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Smart Park. Educational prototype.</span><span>Designed with intention. Built for the future.</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
